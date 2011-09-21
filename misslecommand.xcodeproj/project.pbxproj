@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72AD85D5142AA2A800EDE3FF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72AD85D4142AA2A800EDE3FF /* Cocoa.framework */; };
+		72AD85DF142AA2A800EDE3FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72AD85DD142AA2A800EDE3FF /* InfoPlist.strings */; };
+		72AD85E1142AA2A800EDE3FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AD85E0142AA2A800EDE3FF /* main.m */; };
+		72AD85E5142AA2A800EDE3FF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 72AD85E3142AA2A800EDE3FF /* Credits.rtf */; };
+		72AD85E8142AA2A800EDE3FF /* FEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AD85E7142AA2A800EDE3FF /* FEAppDelegate.m */; };
+		72AD85EB142AA2A900EDE3FF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72AD85E9142AA2A900EDE3FF /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		72AD85D0142AA2A800EDE3FF /* misslecommand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = misslecommand.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72AD85D4142AA2A800EDE3FF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		72AD85D7142AA2A800EDE3FF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		72AD85D8142AA2A800EDE3FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		72AD85D9142AA2A800EDE3FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		72AD85DC142AA2A800EDE3FF /* misslecommand-Info.plist */ = {isa = PBXFileReference; path = "misslecommand-Info.plist"; sourceTree = "<group>"; };
+		72AD85DE142AA2A800EDE3FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		72AD85E0142AA2A800EDE3FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72AD85E2142AA2A800EDE3FF /* misslecommand-Prefix.pch */ = {isa = PBXFileReference; path = "misslecommand-Prefix.pch"; sourceTree = "<group>"; };
+		72AD85E4142AA2A800EDE3FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		72AD85E6142AA2A800EDE3FF /* FEAppDelegate.h */ = {isa = PBXFileReference; path = FEAppDelegate.h; sourceTree = "<group>"; };
+		72AD85E7142AA2A800EDE3FF /* FEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FEAppDelegate.m; sourceTree = "<group>"; };
+		72AD85EA142AA2A900EDE3FF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72AD85CD142AA2A800EDE3FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72AD85D5142AA2A800EDE3FF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72AD85C5142AA2A700EDE3FF = {
+			isa = PBXGroup;
+			children = (
+				72AD85DA142AA2A800EDE3FF /* misslecommand */,
+				72AD85D3142AA2A800EDE3FF /* Frameworks */,
+				72AD85D1142AA2A800EDE3FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72AD85D1142AA2A800EDE3FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72AD85D0142AA2A800EDE3FF /* misslecommand.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72AD85D3142AA2A800EDE3FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72AD85D4142AA2A800EDE3FF /* Cocoa.framework */,
+				72AD85D6142AA2A800EDE3FF /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72AD85D6142AA2A800EDE3FF /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72AD85D7142AA2A800EDE3FF /* AppKit.framework */,
+				72AD85D8142AA2A800EDE3FF /* CoreData.framework */,
+				72AD85D9142AA2A800EDE3FF /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		72AD85DA142AA2A800EDE3FF /* misslecommand */ = {
+			isa = PBXGroup;
+			children = (
+				72AD85E6142AA2A800EDE3FF /* FEAppDelegate.h */,
+				72AD85E7142AA2A800EDE3FF /* FEAppDelegate.m */,
+				72AD85E9142AA2A900EDE3FF /* MainMenu.xib */,
+				72AD85DB142AA2A800EDE3FF /* Supporting Files */,
+			);
+			path = misslecommand;
+			sourceTree = "<group>";
+		};
+		72AD85DB142AA2A800EDE3FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72AD85DC142AA2A800EDE3FF /* misslecommand-Info.plist */,
+				72AD85DD142AA2A800EDE3FF /* InfoPlist.strings */,
+				72AD85E0142AA2A800EDE3FF /* main.m */,
+				72AD85E2142AA2A800EDE3FF /* misslecommand-Prefix.pch */,
+				72AD85E3142AA2A800EDE3FF /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72AD85CF142AA2A800EDE3FF /* misslecommand */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72AD85EE142AA2A900EDE3FF /* Build configuration list for PBXNativeTarget "misslecommand" */;
+			buildPhases = (
+				72AD85CC142AA2A800EDE3FF /* Sources */,
+				72AD85CD142AA2A800EDE3FF /* Frameworks */,
+				72AD85CE142AA2A800EDE3FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = misslecommand;
+			productName = misslecommand;
+			productReference = 72AD85D0142AA2A800EDE3FF /* misslecommand.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72AD85C7142AA2A700EDE3FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 72AD85CA142AA2A700EDE3FF /* Build configuration list for PBXProject "misslecommand" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 72AD85C5142AA2A700EDE3FF;
+			productRefGroup = 72AD85D1142AA2A800EDE3FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72AD85CF142AA2A800EDE3FF /* misslecommand */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72AD85CE142AA2A800EDE3FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72AD85DF142AA2A800EDE3FF /* InfoPlist.strings in Resources */,
+				72AD85E5142AA2A800EDE3FF /* Credits.rtf in Resources */,
+				72AD85EB142AA2A900EDE3FF /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72AD85CC142AA2A800EDE3FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72AD85E1142AA2A800EDE3FF /* main.m in Sources */,
+				72AD85E8142AA2A800EDE3FF /* FEAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		72AD85DD142AA2A800EDE3FF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72AD85DE142AA2A800EDE3FF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		72AD85E3142AA2A800EDE3FF /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72AD85E4142AA2A800EDE3FF /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		72AD85E9142AA2A900EDE3FF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72AD85EA142AA2A900EDE3FF /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72AD85EC142AA2A900EDE3FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		72AD85ED142AA2A900EDE3FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		72AD85EF142AA2A900EDE3FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "misslecommand/misslecommand-Prefix.pch";
+				INFOPLIST_FILE = "misslecommand/misslecommand-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		72AD85F0142AA2A900EDE3FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "misslecommand/misslecommand-Prefix.pch";
+				INFOPLIST_FILE = "misslecommand/misslecommand-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72AD85CA142AA2A700EDE3FF /* Build configuration list for PBXProject "misslecommand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72AD85EC142AA2A900EDE3FF /* Debug */,
+				72AD85ED142AA2A900EDE3FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72AD85EE142AA2A900EDE3FF /* Build configuration list for PBXNativeTarget "misslecommand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72AD85EF142AA2A900EDE3FF /* Debug */,
+				72AD85F0142AA2A900EDE3FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72AD85C7142AA2A700EDE3FF /* Project object */;
+}
