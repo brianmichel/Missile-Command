@@ -13,22 +13,29 @@
 		72AD85E5142AA2A800EDE3FF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 72AD85E3142AA2A800EDE3FF /* Credits.rtf */; };
 		72AD85E8142AA2A800EDE3FF /* FEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AD85E7142AA2A800EDE3FF /* FEAppDelegate.m */; };
 		72AD85EB142AA2A900EDE3FF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72AD85E9142AA2A900EDE3FF /* MainMenu.xib */; };
+		72AD85F2142AA34A00EDE3FF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72AD85F1142AA34A00EDE3FF /* IOKit.framework */; };
+		72AD85F6142AA9E300EDE3FF /* MissileCommandCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AD85F5142AA9E300EDE3FF /* MissileCommandCenter.m */; };
+		72AD85F8142B056800EDE3FF /* imgres.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 72AD85F7142B056700EDE3FF /* imgres.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		72AD85D0142AA2A800EDE3FF /* misslecommand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = misslecommand.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72AD85D0142AA2A800EDE3FF /* missilecommand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = missilecommand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72AD85D4142AA2A800EDE3FF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		72AD85D7142AA2A800EDE3FF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		72AD85D8142AA2A800EDE3FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		72AD85D9142AA2A800EDE3FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		72AD85DC142AA2A800EDE3FF /* misslecommand-Info.plist */ = {isa = PBXFileReference; path = "misslecommand-Info.plist"; sourceTree = "<group>"; };
+		72AD85DC142AA2A800EDE3FF /* missilecommand-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "missilecommand-Info.plist"; sourceTree = "<group>"; };
 		72AD85DE142AA2A800EDE3FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		72AD85E0142AA2A800EDE3FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		72AD85E2142AA2A800EDE3FF /* misslecommand-Prefix.pch */ = {isa = PBXFileReference; path = "misslecommand-Prefix.pch"; sourceTree = "<group>"; };
+		72AD85E2142AA2A800EDE3FF /* misslecommand-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "misslecommand-Prefix.pch"; sourceTree = "<group>"; };
 		72AD85E4142AA2A800EDE3FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		72AD85E6142AA2A800EDE3FF /* FEAppDelegate.h */ = {isa = PBXFileReference; path = FEAppDelegate.h; sourceTree = "<group>"; };
+		72AD85E6142AA2A800EDE3FF /* FEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FEAppDelegate.h; sourceTree = "<group>"; };
 		72AD85E7142AA2A800EDE3FF /* FEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FEAppDelegate.m; sourceTree = "<group>"; };
 		72AD85EA142AA2A900EDE3FF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		72AD85F1142AA34A00EDE3FF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		72AD85F4142AA9E300EDE3FF /* MissileCommandCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MissileCommandCenter.h; sourceTree = "<group>"; };
+		72AD85F5142AA9E300EDE3FF /* MissileCommandCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissileCommandCenter.m; sourceTree = "<group>"; };
+		72AD85F7142B056700EDE3FF /* imgres.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgres.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72AD85F2142AA34A00EDE3FF /* IOKit.framework in Frameworks */,
 				72AD85D5142AA2A800EDE3FF /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,7 +54,8 @@
 		72AD85C5142AA2A700EDE3FF = {
 			isa = PBXGroup;
 			children = (
-				72AD85DA142AA2A800EDE3FF /* misslecommand */,
+				72AD85F7142B056700EDE3FF /* imgres.jpeg */,
+				72AD85DA142AA2A800EDE3FF /* missilecommand */,
 				72AD85D3142AA2A800EDE3FF /* Frameworks */,
 				72AD85D1142AA2A800EDE3FF /* Products */,
 			);
@@ -55,7 +64,7 @@
 		72AD85D1142AA2A800EDE3FF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				72AD85D0142AA2A800EDE3FF /* misslecommand.app */,
+				72AD85D0142AA2A800EDE3FF /* missilecommand.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +72,7 @@
 		72AD85D3142AA2A800EDE3FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72AD85F1142AA34A00EDE3FF /* IOKit.framework */,
 				72AD85D4142AA2A800EDE3FF /* Cocoa.framework */,
 				72AD85D6142AA2A800EDE3FF /* Other Frameworks */,
 			);
@@ -79,21 +89,23 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		72AD85DA142AA2A800EDE3FF /* misslecommand */ = {
+		72AD85DA142AA2A800EDE3FF /* missilecommand */ = {
 			isa = PBXGroup;
 			children = (
+				72AD85F3142AA9AC00EDE3FF /* Missile Manager */,
 				72AD85E6142AA2A800EDE3FF /* FEAppDelegate.h */,
 				72AD85E7142AA2A800EDE3FF /* FEAppDelegate.m */,
 				72AD85E9142AA2A900EDE3FF /* MainMenu.xib */,
 				72AD85DB142AA2A800EDE3FF /* Supporting Files */,
 			);
+			name = missilecommand;
 			path = misslecommand;
 			sourceTree = "<group>";
 		};
 		72AD85DB142AA2A800EDE3FF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				72AD85DC142AA2A800EDE3FF /* misslecommand-Info.plist */,
+				72AD85DC142AA2A800EDE3FF /* missilecommand-Info.plist */,
 				72AD85DD142AA2A800EDE3FF /* InfoPlist.strings */,
 				72AD85E0142AA2A800EDE3FF /* main.m */,
 				72AD85E2142AA2A800EDE3FF /* misslecommand-Prefix.pch */,
@@ -102,12 +114,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		72AD85F3142AA9AC00EDE3FF /* Missile Manager */ = {
+			isa = PBXGroup;
+			children = (
+				72AD85F4142AA9E300EDE3FF /* MissileCommandCenter.h */,
+				72AD85F5142AA9E300EDE3FF /* MissileCommandCenter.m */,
+			);
+			name = "Missile Manager";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		72AD85CF142AA2A800EDE3FF /* misslecommand */ = {
+		72AD85CF142AA2A800EDE3FF /* missilecommand */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 72AD85EE142AA2A900EDE3FF /* Build configuration list for PBXNativeTarget "misslecommand" */;
+			buildConfigurationList = 72AD85EE142AA2A900EDE3FF /* Build configuration list for PBXNativeTarget "missilecommand" */;
 			buildPhases = (
 				72AD85CC142AA2A800EDE3FF /* Sources */,
 				72AD85CD142AA2A800EDE3FF /* Frameworks */,
@@ -117,9 +138,9 @@
 			);
 			dependencies = (
 			);
-			name = misslecommand;
+			name = missilecommand;
 			productName = misslecommand;
-			productReference = 72AD85D0142AA2A800EDE3FF /* misslecommand.app */;
+			productReference = 72AD85D0142AA2A800EDE3FF /* missilecommand.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -130,7 +151,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = 72AD85CA142AA2A700EDE3FF /* Build configuration list for PBXProject "misslecommand" */;
+			buildConfigurationList = 72AD85CA142AA2A700EDE3FF /* Build configuration list for PBXProject "missilecommand" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -142,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				72AD85CF142AA2A800EDE3FF /* misslecommand */,
+				72AD85CF142AA2A800EDE3FF /* missilecommand */,
 			);
 		};
 /* End PBXProject section */
@@ -155,6 +176,7 @@
 				72AD85DF142AA2A800EDE3FF /* InfoPlist.strings in Resources */,
 				72AD85E5142AA2A800EDE3FF /* Credits.rtf in Resources */,
 				72AD85EB142AA2A900EDE3FF /* MainMenu.xib in Resources */,
+				72AD85F8142B056800EDE3FF /* imgres.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +189,7 @@
 			files = (
 				72AD85E1142AA2A800EDE3FF /* main.m in Sources */,
 				72AD85E8142AA2A800EDE3FF /* FEAppDelegate.m in Sources */,
+				72AD85F6142AA9E300EDE3FF /* MissileCommandCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,8 +275,8 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "misslecommand/misslecommand-Prefix.pch";
-				INFOPLIST_FILE = "misslecommand/misslecommand-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "misslecommand/missilecommand-Info.plist";
+				PRODUCT_NAME = missilecommand;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -263,8 +286,8 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "misslecommand/misslecommand-Prefix.pch";
-				INFOPLIST_FILE = "misslecommand/misslecommand-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "misslecommand/missilecommand-Info.plist";
+				PRODUCT_NAME = missilecommand;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -272,7 +295,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		72AD85CA142AA2A700EDE3FF /* Build configuration list for PBXProject "misslecommand" */ = {
+		72AD85CA142AA2A700EDE3FF /* Build configuration list for PBXProject "missilecommand" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				72AD85EC142AA2A900EDE3FF /* Debug */,
@@ -281,7 +304,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		72AD85EE142AA2A900EDE3FF /* Build configuration list for PBXNativeTarget "misslecommand" */ = {
+		72AD85EE142AA2A900EDE3FF /* Build configuration list for PBXNativeTarget "missilecommand" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				72AD85EF142AA2A900EDE3FF /* Debug */,
