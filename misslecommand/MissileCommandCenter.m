@@ -123,6 +123,7 @@ static void Handle_DeviceRemovalCallback(void *inContext,IOReturn inResult, void
 
 #pragma mark - The thing that makes this all work.
 - (IOReturn)performMissileCommand:(MissileCommandAction)command {
+  if (!self.missileLauncher) return kIOReturnError;
   NSArray *elementArray = (__bridge  NSArray *)IOHIDDeviceCopyMatchingElements(self.missileLauncher, NULL, kIOHIDOptionsTypeNone);
   
   IOHIDElementRef element = (__bridge IOHIDElementRef)[elementArray objectAtIndex:1];
