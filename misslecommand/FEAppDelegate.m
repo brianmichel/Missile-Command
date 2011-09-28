@@ -3,7 +3,7 @@
 //  missilecommand
 //
 //  Created by Brian Michel on 9/21/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Foureyes. All rights reserved.
 //
 
 #import "FEAppDelegate.h"

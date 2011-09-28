@@ -16,9 +16,11 @@
 		72AD85F2142AA34A00EDE3FF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72AD85F1142AA34A00EDE3FF /* IOKit.framework */; };
 		72AD85F6142AA9E300EDE3FF /* MissileCommandCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AD85F5142AA9E300EDE3FF /* MissileCommandCenter.m */; };
 		72AD85F8142B056800EDE3FF /* imgres.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 72AD85F7142B056700EDE3FF /* imgres.jpeg */; };
+		72B2DDF21432B7790069CF23 /* MissileCommandWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B2DDF11432B7790069CF23 /* MissileCommandWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7265C591142B127A009E574E /* missilecommand.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = missilecommand.entitlements; sourceTree = SOURCE_ROOT; };
 		72AD85D0142AA2A800EDE3FF /* missilecommand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = missilecommand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72AD85D4142AA2A800EDE3FF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		72AD85D7142AA2A800EDE3FF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -26,16 +28,18 @@
 		72AD85D9142AA2A800EDE3FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		72AD85DC142AA2A800EDE3FF /* missilecommand-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "missilecommand-Info.plist"; sourceTree = "<group>"; };
 		72AD85DE142AA2A800EDE3FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		72AD85E0142AA2A800EDE3FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72AD85E0142AA2A800EDE3FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		72AD85E2142AA2A800EDE3FF /* misslecommand-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "misslecommand-Prefix.pch"; sourceTree = "<group>"; };
 		72AD85E4142AA2A800EDE3FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		72AD85E6142AA2A800EDE3FF /* FEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FEAppDelegate.h; sourceTree = "<group>"; };
-		72AD85E7142AA2A800EDE3FF /* FEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FEAppDelegate.m; sourceTree = "<group>"; };
+		72AD85E6142AA2A800EDE3FF /* FEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FEAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		72AD85E7142AA2A800EDE3FF /* FEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FEAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		72AD85EA142AA2A900EDE3FF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		72AD85F1142AA34A00EDE3FF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		72AD85F4142AA9E300EDE3FF /* MissileCommandCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MissileCommandCenter.h; sourceTree = "<group>"; };
-		72AD85F5142AA9E300EDE3FF /* MissileCommandCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissileCommandCenter.m; sourceTree = "<group>"; };
+		72AD85F4142AA9E300EDE3FF /* MissileCommandCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MissileCommandCenter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		72AD85F5142AA9E300EDE3FF /* MissileCommandCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MissileCommandCenter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		72AD85F7142B056700EDE3FF /* imgres.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgres.jpeg; sourceTree = "<group>"; };
+		72B2DDF01432B7790069CF23 /* MissileCommandWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MissileCommandWindow.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		72B2DDF11432B7790069CF23 /* MissileCommandWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MissileCommandWindow.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 		72AD85DA142AA2A800EDE3FF /* missilecommand */ = {
 			isa = PBXGroup;
 			children = (
+				72B2DDF41432B7F30069CF23 /* Windows */,
+				7265C591142B127A009E574E /* missilecommand.entitlements */,
 				72AD85F3142AA9AC00EDE3FF /* Missile Manager */,
 				72AD85E6142AA2A800EDE3FF /* FEAppDelegate.h */,
 				72AD85E7142AA2A800EDE3FF /* FEAppDelegate.m */,
@@ -121,6 +127,15 @@
 				72AD85F5142AA9E300EDE3FF /* MissileCommandCenter.m */,
 			);
 			name = "Missile Manager";
+			sourceTree = "<group>";
+		};
+		72B2DDF41432B7F30069CF23 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				72B2DDF01432B7790069CF23 /* MissileCommandWindow.h */,
+				72B2DDF11432B7790069CF23 /* MissileCommandWindow.m */,
+			);
+			name = Windows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +205,7 @@
 				72AD85E1142AA2A800EDE3FF /* main.m in Sources */,
 				72AD85E8142AA2A800EDE3FF /* FEAppDelegate.m in Sources */,
 				72AD85F6142AA9E300EDE3FF /* MissileCommandCenter.m in Sources */,
+				72B2DDF21432B7790069CF23 /* MissileCommandWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +260,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -265,7 +281,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -273,6 +289,7 @@
 		72AD85EF142AA2A900EDE3FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = missilecommand.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "misslecommand/misslecommand-Prefix.pch";
 				INFOPLIST_FILE = "misslecommand/missilecommand-Info.plist";
@@ -284,6 +301,7 @@
 		72AD85F0142AA2A900EDE3FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = missilecommand.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "misslecommand/misslecommand-Prefix.pch";
 				INFOPLIST_FILE = "misslecommand/missilecommand-Info.plist";
@@ -311,6 +329,7 @@
 				72AD85F0142AA2A900EDE3FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

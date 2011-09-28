@@ -3,10 +3,11 @@
 //  missilecommand
 //
 //  Created by Brian Michel on 9/21/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Foureyes. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MissileCommandWindow.h"
 
 @interface FEAppDelegate : NSObject <NSApplicationDelegate> {
   NSButton *_upButton;
@@ -19,7 +20,7 @@
 }
 
 
-@property (strong) IBOutlet NSWindow *window;
+@property (strong) IBOutlet MissileCommandWindow *window;
 @property (strong) IBOutlet NSButton *upButton;
 @property (strong) IBOutlet NSButton *rightButton;
 @property (strong) IBOutlet NSButton *downButton;
