@@ -129,23 +129,38 @@ static void Handle_DeviceRemovalCallback(void *inContext,IOReturn inResult, void
   IOHIDElementRef element = (__bridge IOHIDElementRef)[elementArray objectAtIndex:1];
   NSLog(@"Element usage: %i, unit: %i, page: %i, reportid: %i, element exp: %i", IOHIDElementGetUsage(element), IOHIDElementGetUnit(element), IOHIDElementGetUsagePage(element), IOHIDElementGetReportID(element), IOHIDElementGetUnitExponent(element));
   
-  NSString *inCommand = nil;
   switch (command) {
-    case MissileCommandActionUp: { inCommand = @"\x02"; } break;
-    case MissileCommandActionDown: { inCommand = @"\x01"; } break;
-    case MissileCommandActionLeft: { inCommand = @"\x04"; } break;
-    case MissileCommandActionRight: { inCommand = @"\x08"; } break;
-    case MissileCommandActionStop: { inCommand = @"\x20"; } break;
-    case MissileCommandActionFire: { inCommand = @"\x10"; } break;
+      case MissileCommandActionUp: {
+        const uint8_t bytes[] = {'\x02', '\x02', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00'};
+        return IOHIDDeviceSetReport(self.missileLauncher, kIOHIDReportTypeOutput, IOHIDElementGetReportID(element), bytes, 8);
+      }
+      break;
+      case MissileCommandActionDown: {
+        const uint8_t bytes[] = {'\x02', '\x01', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00'};
+        return IOHIDDeviceSetReport(self.missileLauncher, kIOHIDReportTypeOutput, IOHIDElementGetReportID(element), bytes, 8);
+      }
+      break;
+      case MissileCommandActionLeft: {
+        const uint8_t bytes[] = {'\x02', '\x04', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00'};
+        return IOHIDDeviceSetReport(self.missileLauncher, kIOHIDReportTypeOutput, IOHIDElementGetReportID(element), bytes, 8);
+      }
+      break;
+      case MissileCommandActionRight: {
+         const uint8_t bytes[] = {'\x02', '\x08', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00'};
+         return IOHIDDeviceSetReport(self.missileLauncher, kIOHIDReportTypeOutput, IOHIDElementGetReportID(element), bytes, 8);
+      }
+      break;
+      case MissileCommandActionStop: {
+        const uint8_t bytes[] = {'\x02', '\x20', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00'};
+        return IOHIDDeviceSetReport(self.missileLauncher, kIOHIDReportTypeOutput, IOHIDElementGetReportID(element), bytes, 8);
+      }
+      break;
+     case MissileCommandActionFire: {
+        const uint8_t bytes[] = {'\x02', '\x10', '\x00', '\x00', '\x00', '\x00', '\x00', '\x00'};
+        return IOHIDDeviceSetReport(self.missileLauncher, kIOHIDReportTypeOutput, IOHIDElementGetReportID(element), bytes, 8);
+        }
+    break;
   }
-  
-  
-  NSString *stringCommand = [NSString stringWithFormat:@"\\x02\%@\\x00\\x00\\x00\\x00\\x00\\x00", inCommand];
-  NSData  *commandData = [stringCommand dataUsingEncoding:NSUTF8StringEncoding];
-  const uint8_t * bytes = (const uint8_t *)[commandData bytes];
-
-  return IOHIDDeviceSetReport(self.missileLauncher, kIOHIDReportTypeOutput, IOHIDElementGetReportID(element), bytes, 8);
-  //Holy Ugly!
 }
 
 @end
