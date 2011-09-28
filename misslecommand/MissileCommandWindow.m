@@ -11,7 +11,7 @@
 
 @implementation MissileCommandWindow
 
--(void)keyDown:(NSEvent *)theEvent{
+- (void)keyDown:(NSEvent *)theEvent{
   [super keyDown:theEvent];
 
   switch (theEvent.keyCode) {
@@ -39,11 +39,15 @@
   }
 }
 
--(void)keyUp:(NSEvent *)theEvent{
+- (void)keyUp:(NSEvent *)theEvent{
   [super keyUp:theEvent];
   
   if (theEvent.keyCode != 49) {
     [[MissileCommandCenter sharedCommandCenter] stopTurret];
   }
+}
+
+- (void)mouseUp:(NSEvent *)theEvent {
+  [[MissileCommandCenter sharedCommandCenter] stopTurret];
 }
 @end
