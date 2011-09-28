@@ -16,12 +16,12 @@ How To Use The App
  
  The app supports the following keyboard shortcuts:
 
- * w - turret up
- * a - turret left
- * s - turret down
- * d - turret right
- * p - turret stop
- * space - fire
+ * `w` - turret up
+ * `a` - turret left
+ * `s` - turret down
+ * `d` - turret right
+ * `p` - turret stop
+ * `space` - fire
 
 It should be noted that the keyUp events on the window will trigger as turret stop event as well as a mouseUp action. This is so you can have somewhat fine grained control over the movement of the turret.
 
@@ -33,4 +33,4 @@ The Future
 Special Thanks
 ---------------
 
- Thanks to codedance for the awesome retaliation python script, available [here]("https://github.com/codedance/Retaliation").
+ Thanks to [codedance]("https://github.com/codedance") for the awesome retaliation python script, available [here]("https://github.com/codedance/Retaliation").
