@@ -22,6 +22,7 @@
 - (void)turretConnectivityChange:(NSNotification *)notification;
 - (void)startServer;
 - (void)stopServer;
+- (void)updateClientLabel;
 @end
 
 @implementation MCAppDelegate
@@ -37,6 +38,7 @@
 @synthesize serverSwitch = _serverSwitch;
 @synthesize asyncSocket = _asyncSocket;
 @synthesize connections = _connections;
+@synthesize numberOfClients = _numberOfClients;
 @synthesize service = _service;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -53,6 +55,15 @@
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(turretConnectivityChange:) name:kMissileCommandConnectivityChange object:nil];
 }
 
+- (void)updateClientLabel {
+  if ([self.connections count] == 1) {
+    [self.numberOfClients setTitle:@"Client Connected"];
+  } else if ([self.connections count] > 1) {
+    [self.numberOfClients setTitle:[NSString stringWithFormat:@"Clients Connected %i", [self.connections count]]];
+  } else {
+    [self.numberOfClients setTitle:@"No Clients Connected"];
+  }
+}
 
 #pragma mark - Turret Actions
 - (IBAction)stopTurret:(id)sender {
@@ -167,6 +178,7 @@
 	// The newSocket automatically inherits its delegate & delegateQueue from its parent.
 	
 	[self.connections addObject:newSocket];
+  [self updateClientLabel];
   
 	NSString *welcomeMsg = @"Welcome to the AsyncSocket Echo Server\r\n";
 	NSData *welcomeData = [welcomeMsg dataUsingEncoding:NSUTF8StringEncoding];
@@ -178,6 +190,7 @@
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
 {
 	[self.connections removeObject:sock];
+  [self updateClientLabel];
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag

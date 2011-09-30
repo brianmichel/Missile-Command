@@ -19,6 +19,7 @@
   NSButton *_stopButton;
   NSTextField *_failureTextField;
   NSSegmentedControl *_serverSwitch;
+  NSTextFieldCell *_numberOfClients;
 }
 
 @property (strong) IBOutlet MissileCommandWindow *window;
@@ -33,6 +34,7 @@
 @property (strong) GCDAsyncSocket *asyncSocket;
 @property (strong) NSNetService *service;
 @property (strong) NSMutableArray *connections;
+@property (assign) IBOutlet NSTextFieldCell *numberOfClients;
 
 
 - (IBAction)stopTurret:(id)sender;
