@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GCDAsyncSocket.h"
 
-@interface MCMViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource,NSNetServiceBrowserDelegate, NSNetServiceDelegate, GCDAsyncSocketDelegate> {
+@interface MCMViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate,NSNetServiceBrowserDelegate, NSNetServiceDelegate, GCDAsyncSocketDelegate> {
   BOOL connected;
 }
 
