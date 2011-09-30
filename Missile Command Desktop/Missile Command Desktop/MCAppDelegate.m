@@ -126,7 +126,7 @@
 
 #pragma - Bonjour Server Methods
 - (void)startServer {
-  self.asyncSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
+  self.asyncSocket = [[[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()] autorelease];
   
   self.connections = [NSMutableArray array];
   
@@ -140,10 +140,10 @@
 		// Create and publish the bonjour service.
 		// Obviously you will be using your own custom service type.
 		
-		self.service = [[NSNetService alloc] initWithDomain:@"local."
+		self.service = [[[NSNetService alloc] initWithDomain:@"local."
                                                    type:@"_missilecommand._tcp."
                                                    name:@""
-                                                   port:port];
+                                                   port:port] autorelease];
 		
 		[self.service setDelegate:self];
 		[self.service publish];
@@ -187,7 +187,7 @@
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
   NSData *strData = [data subdataWithRange:NSMakeRange(0, [data length] - 2)];
-	NSString *msg = [[NSString alloc] initWithData:strData encoding:NSUTF8StringEncoding];
+	NSString *msg = [[[NSString alloc] initWithData:strData encoding:NSUTF8StringEncoding] autorelease];
   NSLog(@"READ THE SOCKET!");
 	dispatch_async(dispatch_get_main_queue(), ^{
 		switch (tag) {

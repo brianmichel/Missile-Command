@@ -300,6 +300,7 @@
 		7250848F143533860017E8BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Missile Command Desktop/Missile Command Desktop-Prefix.pch";
 				INFOPLIST_FILE = "Missile Command Desktop/Missile Command Desktop-Info.plist";
@@ -312,6 +313,7 @@
 		72508490143533860017E8BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Missile Command Desktop/Missile Command Desktop-Prefix.pch";
 				INFOPLIST_FILE = "Missile Command Desktop/Missile Command Desktop-Info.plist";
@@ -340,6 +342,7 @@
 				72508490143533860017E8BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

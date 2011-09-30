@@ -102,6 +102,7 @@ static void Handle_DeviceRemovalCallback(void *inContext,IOReturn inResult, void
     NSSet *set = (__bridge NSSet *)IOHIDManagerCopyDevices(self.manager);
     self.missileLauncher = (__bridge IOHIDDeviceRef)[set anyObject];
     NSLog(@"DEVICES: %@", set);
+    [set release];
     return YES;
   } else {
     NSLog(@"Didn't open shit: %i", openCode);

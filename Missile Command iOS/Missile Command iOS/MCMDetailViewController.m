@@ -106,7 +106,7 @@
   // Release any retained subviews of the main view.
   // e.g. self.myOutlet = nil;
 }
-
+  
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   
@@ -149,6 +149,17 @@
 
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {
   NSLog(@"Wrote the data!");
+}
+
+- (void)dealloc {
+  [serverLabel release];
+  [upButton release];
+  [downAction release];
+  [leftButton release];
+  [rightButton release];
+  [stopButton release];
+  [fireButton release];
+  [super dealloc];
 }
 
 @end

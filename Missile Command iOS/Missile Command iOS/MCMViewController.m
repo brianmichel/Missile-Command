@@ -258,4 +258,13 @@
   NSLog(@"WROTE PARTIAL DATA?");
 }
 
+- (void)dealloc {
+  [__addressArray release];
+  [__serviceBrowser release];
+  [__serverService release];
+  [__asyncSocket release];
+  [__servicesArray release];
+  [super dealloc];
+}
+
 @end
