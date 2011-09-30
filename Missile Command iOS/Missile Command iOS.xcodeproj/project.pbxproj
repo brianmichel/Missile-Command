@@ -1,0 +1,342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72508448143533690017E8BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72508447143533690017E8BC /* UIKit.framework */; };
+		7250844A143533690017E8BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72508449143533690017E8BC /* Foundation.framework */; };
+		72508450143533690017E8BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7250844E143533690017E8BC /* InfoPlist.strings */; };
+		72508452143533690017E8BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72508451143533690017E8BC /* main.m */; };
+		72508456143533690017E8BC /* MCMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72508455143533690017E8BC /* MCMAppDelegate.m */; };
+		72508459143533690017E8BC /* MCMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72508458143533690017E8BC /* MCMViewController.m */; };
+		7250845C143533690017E8BC /* MCMViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7250845A143533690017E8BC /* MCMViewController_iPhone.xib */; };
+		7250845F143533690017E8BC /* MCMViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7250845D143533690017E8BC /* MCMViewController_iPad.xib */; };
+		725084A714353A960017E8BC /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 725084A614353A960017E8BC /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		725084A914353AA70017E8BC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725084A814353AA70017E8BC /* CFNetwork.framework */; };
+		725084AB14353AAC0017E8BC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725084AA14353AAC0017E8BC /* Security.framework */; };
+		725084B114353D000017E8BC /* MCMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725084AF14353D000017E8BC /* MCMDetailViewController.m */; };
+		725084B214353D000017E8BC /* MCMDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 725084B014353D000017E8BC /* MCMDetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		72508443143533690017E8BC /* Missile Command iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Missile Command iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72508447143533690017E8BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		72508449143533690017E8BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7250844D143533690017E8BC /* Missile Command iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Missile Command iOS-Info.plist"; sourceTree = "<group>"; };
+		7250844F143533690017E8BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		72508451143533690017E8BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72508453143533690017E8BC /* Missile Command iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Missile Command iOS-Prefix.pch"; sourceTree = "<group>"; };
+		72508454143533690017E8BC /* MCMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMAppDelegate.h; sourceTree = "<group>"; };
+		72508455143533690017E8BC /* MCMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCMAppDelegate.m; sourceTree = "<group>"; };
+		72508457143533690017E8BC /* MCMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMViewController.h; sourceTree = "<group>"; };
+		72508458143533690017E8BC /* MCMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCMViewController.m; sourceTree = "<group>"; };
+		7250845B143533690017E8BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MCMViewController_iPhone.xib; sourceTree = "<group>"; };
+		7250845E143533690017E8BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MCMViewController_iPad.xib; sourceTree = "<group>"; };
+		725084A514353A960017E8BC /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		725084A614353A960017E8BC /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		725084A814353AA70017E8BC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		725084AA14353AAC0017E8BC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		725084AE14353D000017E8BC /* MCMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMDetailViewController.h; sourceTree = "<group>"; };
+		725084AF14353D000017E8BC /* MCMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMDetailViewController.m; sourceTree = "<group>"; };
+		725084B014353D000017E8BC /* MCMDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCMDetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72508440143533690017E8BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				725084AB14353AAC0017E8BC /* Security.framework in Frameworks */,
+				725084A914353AA70017E8BC /* CFNetwork.framework in Frameworks */,
+				72508448143533690017E8BC /* UIKit.framework in Frameworks */,
+				7250844A143533690017E8BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72508438143533680017E8BC = {
+			isa = PBXGroup;
+			children = (
+				7250844B143533690017E8BC /* Missile Command iOS */,
+				72508446143533690017E8BC /* Frameworks */,
+				72508444143533690017E8BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72508444143533690017E8BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72508443143533690017E8BC /* Missile Command iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72508446143533690017E8BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				725084AA14353AAC0017E8BC /* Security.framework */,
+				725084A814353AA70017E8BC /* CFNetwork.framework */,
+				72508447143533690017E8BC /* UIKit.framework */,
+				72508449143533690017E8BC /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7250844B143533690017E8BC /* Missile Command iOS */ = {
+			isa = PBXGroup;
+			children = (
+				725084AD14353CB40017E8BC /* View Controllers */,
+				725084AC14353CA40017E8BC /* Resources */,
+				725084A414353A860017E8BC /* AsyncSocket */,
+				72508454143533690017E8BC /* MCMAppDelegate.h */,
+				72508455143533690017E8BC /* MCMAppDelegate.m */,
+				7250844C143533690017E8BC /* Supporting Files */,
+			);
+			path = "Missile Command iOS";
+			sourceTree = "<group>";
+		};
+		7250844C143533690017E8BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7250844D143533690017E8BC /* Missile Command iOS-Info.plist */,
+				7250844E143533690017E8BC /* InfoPlist.strings */,
+				72508451143533690017E8BC /* main.m */,
+				72508453143533690017E8BC /* Missile Command iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		725084A414353A860017E8BC /* AsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				725084A514353A960017E8BC /* GCDAsyncSocket.h */,
+				725084A614353A960017E8BC /* GCDAsyncSocket.m */,
+			);
+			name = AsyncSocket;
+			sourceTree = "<group>";
+		};
+		725084AC14353CA40017E8BC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				725084B014353D000017E8BC /* MCMDetailViewController.xib */,
+				7250845A143533690017E8BC /* MCMViewController_iPhone.xib */,
+				7250845D143533690017E8BC /* MCMViewController_iPad.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		725084AD14353CB40017E8BC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				725084AE14353D000017E8BC /* MCMDetailViewController.h */,
+				725084AF14353D000017E8BC /* MCMDetailViewController.m */,
+				72508457143533690017E8BC /* MCMViewController.h */,
+				72508458143533690017E8BC /* MCMViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72508442143533690017E8BC /* Missile Command iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72508462143533690017E8BC /* Build configuration list for PBXNativeTarget "Missile Command iOS" */;
+			buildPhases = (
+				7250843F143533690017E8BC /* Sources */,
+				72508440143533690017E8BC /* Frameworks */,
+				72508441143533690017E8BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Missile Command iOS";
+			productName = "Missile Command iOS";
+			productReference = 72508443143533690017E8BC /* Missile Command iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7250843A143533680017E8BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7250843D143533680017E8BC /* Build configuration list for PBXProject "Missile Command iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 72508438143533680017E8BC;
+			productRefGroup = 72508444143533690017E8BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72508442143533690017E8BC /* Missile Command iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72508441143533690017E8BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72508450143533690017E8BC /* InfoPlist.strings in Resources */,
+				7250845C143533690017E8BC /* MCMViewController_iPhone.xib in Resources */,
+				7250845F143533690017E8BC /* MCMViewController_iPad.xib in Resources */,
+				725084B214353D000017E8BC /* MCMDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7250843F143533690017E8BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72508452143533690017E8BC /* main.m in Sources */,
+				72508456143533690017E8BC /* MCMAppDelegate.m in Sources */,
+				72508459143533690017E8BC /* MCMViewController.m in Sources */,
+				725084A714353A960017E8BC /* GCDAsyncSocket.m in Sources */,
+				725084B114353D000017E8BC /* MCMDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7250844E143533690017E8BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7250844F143533690017E8BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7250845A143533690017E8BC /* MCMViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7250845B143533690017E8BC /* en */,
+			);
+			name = MCMViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		7250845D143533690017E8BC /* MCMViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7250845E143533690017E8BC /* en */,
+			);
+			name = MCMViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72508460143533690017E8BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72508461143533690017E8BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72508463143533690017E8BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Missile Command iOS/Missile Command iOS-Prefix.pch";
+				INFOPLIST_FILE = "Missile Command iOS/Missile Command iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		72508464143533690017E8BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Missile Command iOS/Missile Command iOS-Prefix.pch";
+				INFOPLIST_FILE = "Missile Command iOS/Missile Command iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7250843D143533680017E8BC /* Build configuration list for PBXProject "Missile Command iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72508460143533690017E8BC /* Debug */,
+				72508461143533690017E8BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72508462143533690017E8BC /* Build configuration list for PBXNativeTarget "Missile Command iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72508463143533690017E8BC /* Debug */,
+				72508464143533690017E8BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7250843A143533680017E8BC /* Project object */;
+}

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Missile Command Desktop' target in the 'Missile Command Desktop' project
+//
+
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+#endif

@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72508475143533850017E8BC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72508474143533850017E8BC /* Cocoa.framework */; };
+		7250847F143533860017E8BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7250847D143533860017E8BC /* InfoPlist.strings */; };
+		72508481143533860017E8BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72508480143533860017E8BC /* main.m */; };
+		72508485143533860017E8BC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 72508483143533860017E8BC /* Credits.rtf */; };
+		72508488143533860017E8BC /* MCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72508487143533860017E8BC /* MCAppDelegate.m */; };
+		72508494143533C40017E8BC /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 72508493143533C40017E8BC /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		72508498143534140017E8BC /* MissileCommandWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 72508497143534140017E8BC /* MissileCommandWindow.m */; };
+		7250849C1435348D0017E8BC /* MissileCommandCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7250849B1435348D0017E8BC /* MissileCommandCenter.m */; };
+		7250849F143535770017E8BC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7250849E143535770017E8BC /* MainMenu.xib */; };
+		725084A1143537160017E8BC /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725084A0143537160017E8BC /* IOKit.framework */; };
+		725084A3143537210017E8BC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725084A2143537210017E8BC /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		72508470143533850017E8BC /* Missile Command Desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Missile Command Desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72508474143533850017E8BC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		72508477143533850017E8BC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		72508478143533850017E8BC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		72508479143533850017E8BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7250847C143533860017E8BC /* Missile Command Desktop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Missile Command Desktop-Info.plist"; sourceTree = "<group>"; };
+		7250847E143533860017E8BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		72508480143533860017E8BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72508482143533860017E8BC /* Missile Command Desktop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Missile Command Desktop-Prefix.pch"; sourceTree = "<group>"; };
+		72508484143533860017E8BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		72508486143533860017E8BC /* MCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCAppDelegate.h; sourceTree = "<group>"; };
+		72508487143533860017E8BC /* MCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCAppDelegate.m; sourceTree = "<group>"; };
+		72508492143533BA0017E8BC /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		72508493143533C40017E8BC /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		72508496143534140017E8BC /* MissileCommandWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissileCommandWindow.h; sourceTree = "<group>"; };
+		72508497143534140017E8BC /* MissileCommandWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissileCommandWindow.m; sourceTree = "<group>"; };
+		7250849A1435348D0017E8BC /* MissileCommandCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissileCommandCenter.h; sourceTree = "<group>"; };
+		7250849B1435348D0017E8BC /* MissileCommandCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissileCommandCenter.m; sourceTree = "<group>"; };
+		7250849E143535770017E8BC /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		725084A0143537160017E8BC /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		725084A2143537210017E8BC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7250846D143533850017E8BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				725084A3143537210017E8BC /* Security.framework in Frameworks */,
+				725084A1143537160017E8BC /* IOKit.framework in Frameworks */,
+				72508475143533850017E8BC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72508465143533850017E8BC = {
+			isa = PBXGroup;
+			children = (
+				7250847A143533850017E8BC /* Missile Command Desktop */,
+				72508473143533850017E8BC /* Frameworks */,
+				72508471143533850017E8BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72508471143533850017E8BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72508470143533850017E8BC /* Missile Command Desktop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72508473143533850017E8BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				725084A2143537210017E8BC /* Security.framework */,
+				725084A0143537160017E8BC /* IOKit.framework */,
+				72508474143533850017E8BC /* Cocoa.framework */,
+				72508476143533850017E8BC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72508476143533850017E8BC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72508477143533850017E8BC /* AppKit.framework */,
+				72508478143533850017E8BC /* CoreData.framework */,
+				72508479143533850017E8BC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7250847A143533850017E8BC /* Missile Command Desktop */ = {
+			isa = PBXGroup;
+			children = (
+				7250849D143534C90017E8BC /* Resources */,
+				725084991435347E0017E8BC /* Command Center */,
+				72508495143533F90017E8BC /* Windows */,
+				72508491143533AC0017E8BC /* AsyncSocket */,
+				72508486143533860017E8BC /* MCAppDelegate.h */,
+				72508487143533860017E8BC /* MCAppDelegate.m */,
+				7250847B143533860017E8BC /* Supporting Files */,
+			);
+			path = "Missile Command Desktop";
+			sourceTree = "<group>";
+		};
+		7250847B143533860017E8BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7250847C143533860017E8BC /* Missile Command Desktop-Info.plist */,
+				7250847D143533860017E8BC /* InfoPlist.strings */,
+				72508480143533860017E8BC /* main.m */,
+				72508482143533860017E8BC /* Missile Command Desktop-Prefix.pch */,
+				72508483143533860017E8BC /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72508491143533AC0017E8BC /* AsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				72508493143533C40017E8BC /* GCDAsyncSocket.m */,
+				72508492143533BA0017E8BC /* GCDAsyncSocket.h */,
+			);
+			name = AsyncSocket;
+			sourceTree = "<group>";
+		};
+		72508495143533F90017E8BC /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				72508496143534140017E8BC /* MissileCommandWindow.h */,
+				72508497143534140017E8BC /* MissileCommandWindow.m */,
+			);
+			name = Windows;
+			sourceTree = "<group>";
+		};
+		725084991435347E0017E8BC /* Command Center */ = {
+			isa = PBXGroup;
+			children = (
+				7250849A1435348D0017E8BC /* MissileCommandCenter.h */,
+				7250849B1435348D0017E8BC /* MissileCommandCenter.m */,
+			);
+			name = "Command Center";
+			sourceTree = "<group>";
+		};
+		7250849D143534C90017E8BC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7250849E143535770017E8BC /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7250846F143533850017E8BC /* Missile Command Desktop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7250848E143533860017E8BC /* Build configuration list for PBXNativeTarget "Missile Command Desktop" */;
+			buildPhases = (
+				7250846C143533850017E8BC /* Sources */,
+				7250846D143533850017E8BC /* Frameworks */,
+				7250846E143533850017E8BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Missile Command Desktop";
+			productName = "Missile Command Desktop";
+			productReference = 72508470143533850017E8BC /* Missile Command Desktop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72508467143533850017E8BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7250846A143533850017E8BC /* Build configuration list for PBXProject "Missile Command Desktop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 72508465143533850017E8BC;
+			productRefGroup = 72508471143533850017E8BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7250846F143533850017E8BC /* Missile Command Desktop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7250846E143533850017E8BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7250847F143533860017E8BC /* InfoPlist.strings in Resources */,
+				72508485143533860017E8BC /* Credits.rtf in Resources */,
+				7250849F143535770017E8BC /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7250846C143533850017E8BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72508481143533860017E8BC /* main.m in Sources */,
+				72508488143533860017E8BC /* MCAppDelegate.m in Sources */,
+				72508494143533C40017E8BC /* GCDAsyncSocket.m in Sources */,
+				72508498143534140017E8BC /* MissileCommandWindow.m in Sources */,
+				7250849C1435348D0017E8BC /* MissileCommandCenter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7250847D143533860017E8BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7250847E143533860017E8BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		72508483143533860017E8BC /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72508484143533860017E8BC /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7250848C143533860017E8BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7250848D143533860017E8BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7250848F143533860017E8BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Missile Command Desktop/Missile Command Desktop-Prefix.pch";
+				INFOPLIST_FILE = "Missile Command Desktop/Missile Command Desktop-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		72508490143533860017E8BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Missile Command Desktop/Missile Command Desktop-Prefix.pch";
+				INFOPLIST_FILE = "Missile Command Desktop/Missile Command Desktop-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7250846A143533850017E8BC /* Build configuration list for PBXProject "Missile Command Desktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7250848C143533860017E8BC /* Debug */,
+				7250848D143533860017E8BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7250848E143533860017E8BC /* Build configuration list for PBXNativeTarget "Missile Command Desktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7250848F143533860017E8BC /* Debug */,
+				72508490143533860017E8BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72508467143533850017E8BC /* Project object */;
+}
