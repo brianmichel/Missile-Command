@@ -59,7 +59,7 @@
   if ([self.connections count] == 1) {
     [self.numberOfClients setTitle:@"Client Connected"];
   } else if ([self.connections count] > 1) {
-    [self.numberOfClients setTitle:[NSString stringWithFormat:@"Clients Connected %i", [self.connections count]]];
+    [self.numberOfClients setTitle:[NSString stringWithFormat:@"Clients Connected (%i)", [self.connections count]]];
   } else {
     [self.numberOfClients setTitle:@"No Clients Connected"];
   }
