@@ -29,32 +29,32 @@
 @synthesize buttons;
 
 - (IBAction)upAction:(id)sender {
-  NSData *data = [[NSString stringWithString:@"UP"] dataUsingEncoding:NSUTF8StringEncoding];
+  NSData *data = [[NSString stringWithFormat:@"%i\r\n",kUpTag] dataUsingEncoding:NSUTF8StringEncoding];
   [self.asyncSocket writeData:data withTimeout:-1 tag:kUpTag];
 }
 
 - (IBAction)downAction:(id)sender {
-  NSData *data = [[NSString stringWithString:@"DOWN"] dataUsingEncoding:NSUTF8StringEncoding];
+  NSData *data = [[NSString stringWithFormat:@"%i\r\n",kDownTag] dataUsingEncoding:NSUTF8StringEncoding];
   [self.asyncSocket writeData:data withTimeout:-1 tag:kDownTag];
 }
 
 - (IBAction)leftAction:(id)sender {
-  NSData *data = [[NSString stringWithString:@"LEFT"] dataUsingEncoding:NSUTF8StringEncoding];
+  NSData *data = [[NSString stringWithFormat:@"%i\r\n",kLeftTag] dataUsingEncoding:NSUTF8StringEncoding];
   [self.asyncSocket writeData:data withTimeout:-1 tag:kLeftTag];
 }
 
 - (IBAction)rightAction:(id)sender {
-  NSData *data = [[NSString stringWithString:@"RIGHT"] dataUsingEncoding:NSUTF8StringEncoding];
+  NSData *data = [[NSString stringWithFormat:@"%i\r\n",kRightTag] dataUsingEncoding:NSUTF8StringEncoding];
   [self.asyncSocket writeData:data withTimeout:-1 tag:kRightTag];
 }
 
 - (IBAction)stopAction:(id)sender {
-  NSData *data = [[NSString stringWithString:@"STOP"] dataUsingEncoding:NSUTF8StringEncoding];
+  NSData *data = [[NSString stringWithFormat:@"%i\r\n",kStopTag] dataUsingEncoding:NSUTF8StringEncoding];
   [self.asyncSocket writeData:data withTimeout:-1 tag:kStopTag];
 }
 
 - (IBAction)fireAction:(id)sender {
-  NSData *data = [[NSString stringWithString:@"FIRE"] dataUsingEncoding:NSUTF8StringEncoding];
+  NSData *data = [[NSString stringWithFormat:@"%i\r\n",kFireTag] dataUsingEncoding:NSUTF8StringEncoding];
   [self.asyncSocket writeData:data withTimeout:-1 tag:kFireTag];
 }
 

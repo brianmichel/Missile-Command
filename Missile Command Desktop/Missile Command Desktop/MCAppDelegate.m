@@ -172,6 +172,7 @@
 	NSData *welcomeData = [welcomeMsg dataUsingEncoding:NSUTF8StringEncoding];
 	
 	[newSocket writeData:welcomeData withTimeout:-1 tag:4];
+  [newSocket readDataWithTimeout:-1 tag:9];
 }
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
@@ -186,11 +187,11 @@
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
-  NSData *strData = [data subdataWithRange:NSMakeRange(0, [data length] - 2)];
+  NSData *strData = [data subdataWithRange:NSMakeRange(0, [data length])];
 	NSString *msg = [[NSString alloc] initWithData:strData encoding:NSUTF8StringEncoding];
-  NSLog(@"READ THE SOCKET!");
+  NSLog(@"READ THE SOCKET! %@", msg);
 	dispatch_async(dispatch_get_main_queue(), ^{
-		switch (tag) {
+		switch ([msg intValue]) {
       case kUpTag: [self moveUp:self]; break;
       case kDownTag: [self moveDown:self]; break;
       case kLeftTag: [self moveLeft:self]; break;
