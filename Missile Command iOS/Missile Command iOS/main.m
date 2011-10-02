@@ -3,7 +3,7 @@
 //  Missile Command iOS
 //
 //  Created by Brian Michel on 9/29/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Brian Michel. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

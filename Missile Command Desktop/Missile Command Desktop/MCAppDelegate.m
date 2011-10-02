@@ -9,19 +9,10 @@
 #import "MCAppDelegate.h"
 #import "MissileCommandCenter.h"
 
-#define kUpTag 1
-#define kDownTag 2
-#define kLeftTag 3
-#define kRightTag 4
-#define kFireTag 5
-#define kStopTag 6
-
 @interface MCAppDelegate (Private)
 - (void)enableButtons;
 - (void)disableButtons;
 - (void)turretConnectivityChange:(NSNotification *)notification;
-- (void)startServer;
-- (void)stopServer;
 - (void)updateClientLabel;
 @end
 
@@ -36,10 +27,8 @@
 @synthesize stopButton = _stopButton;
 @synthesize failureTextField = _failureTextField;
 @synthesize serverSwitch = _serverSwitch;
-@synthesize asyncSocket = _asyncSocket;
-@synthesize connections = _connections;
 @synthesize numberOfClients = _numberOfClients;
-@synthesize service = _service;
+@synthesize server = __server;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -53,13 +42,15 @@
   }
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(turretConnectivityChange:) name:kMissileCommandConnectivityChange object:nil];
+  self.server = [[MissileServer alloc] init];
+  [self.server setDelegate:self];
 }
 
 - (void)updateClientLabel {
-  if ([self.connections count] == 1) {
+  if ([self.server.connections count] == 1) {
     [self.numberOfClients setTitle:@"Client Connected"];
-  } else if ([self.connections count] > 1) {
-    [self.numberOfClients setTitle:[NSString stringWithFormat:@"Clients Connected (%i)", [self.connections count]]];
+  } else if ([self.server.connections count] > 1) {
+    [self.numberOfClients setTitle:[NSString stringWithFormat:@"Clients Connected (%i)", [self.server.connections count]]];
   } else {
     [self.numberOfClients setTitle:@"No Clients Connected"];
   }
@@ -95,11 +86,11 @@
   switch (serverSwitch.selectedSegment) {
     case 0:
       NSLog(@"Turn The Server ON!");
-      [self startServer];
+      [self.server start];
       break;
     case 1:
       NSLog(@"Turn The Server OFF!");
-      [self stopServer];
+      [self.server stop];
       break;
   }
 }
@@ -135,117 +126,28 @@
   [_fireButton setEnabled:NO];
 }
 
-#pragma - Bonjour Server Methods
-- (void)startServer {
-  self.asyncSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
-  
-  self.connections = [NSMutableArray array];
-  
-  NSError *err = nil;
-	if ([self.asyncSocket acceptOnPort:0 error:&err])
-	{
-		// So what port did the OS give us?
-		
-		UInt16 port = [self.asyncSocket localPort];
-		
-		// Create and publish the bonjour service.
-		// Obviously you will be using your own custom service type.
-		
-		self.service = [[NSNetService alloc] initWithDomain:@"local."
-                                                   type:@"_missilecommand._tcp."
-                                                   name:@""
-                                                   port:port];
-		
-		[self.service setDelegate:self];
-		[self.service publish];
-	}
-	else
-	{
-		NSLog(@"Error in acceptOnPort:error: -> %@", err);
-	}
+#pragma mark - Missile Server Delegate
+- (void)server:(MissileServer *)server didStartSuccessfully:(NSNetService *)service {}
+- (void)server:(MissileServer *)server failedToStartWithError:(NSError *)error {
+  [self.server stop];
 }
 
-- (void)stopServer {
-  [self.asyncSocket disconnectAfterReadingAndWriting];
-  [self.service stop];
+- (void)server:(MissileServer *)server didReceiveCommand:(MissileServerCommand)command {
+  switch (command) {
+    case MissileServerCommandUp: [self moveUp:self]; break;
+    case MissileServerCommandDown: [self moveDown:self]; break;
+    case MissileServerCommandLeft: [self moveLeft:self]; break;
+    case MissileServerCommandRight: [self moveRight:self]; break;
+    case MissileServerCommandFire: [self fire:self]; break;
+    case MissileServerCommandStop: [self stopTurret:self]; break;
+    default: [self stopTurret:self]; break;
+  }
 }
-
-#pragma mark - ASyncSocket Delegate
-- (void)socket:(GCDAsyncSocket *)sock didAcceptNewSocket:(GCDAsyncSocket *)newSocket
-{
-	NSLog(@"Accepted new socket from %@:%hu", [newSocket connectedHost], [newSocket connectedPort]);
-	
-	// The newSocket automatically inherits its delegate & delegateQueue from its parent.
-	
-	[self.connections addObject:newSocket];
+- (void)server:(MissileServer *)server didAcceptNewClient:(GCDAsyncSocket *)socket {
   [self updateClientLabel];
-  
-	NSString *welcomeMsg = @"Welcome to the AsyncSocket Echo Server\r\n";
-	NSData *welcomeData = [welcomeMsg dataUsingEncoding:NSUTF8StringEncoding];
-	
-	[newSocket writeData:welcomeData withTimeout:-1 tag:4];
-  [newSocket readDataWithTimeout:-1 tag:9];
 }
-
-- (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
-{
-	[self.connections removeObject:sock];
+- (void)server:(MissileServer *)server clientDidDisconnectSocket:(GCDAsyncSocket *)socket withError:(NSError *)error {
   [self updateClientLabel];
 }
 
-- (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag
-{
-  [sock readDataToData:[GCDAsyncSocket CRLFData] withTimeout:-1 tag:0];
-}
-
-- (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
-{
-  NSData *strData = [data subdataWithRange:NSMakeRange(0, [data length])];
-	NSString *msg = [[NSString alloc] initWithData:strData encoding:NSUTF8StringEncoding];
-  NSLog(@"READ THE SOCKET! %@", msg);
-	dispatch_async(dispatch_get_main_queue(), ^{
-		switch ([msg intValue]) {
-      case kUpTag: [self moveUp:self]; break;
-      case kDownTag: [self moveDown:self]; break;
-      case kLeftTag: [self moveLeft:self]; break;
-      case kRightTag: [self moveRight:self]; break;
-      case kFireTag: [self fire:self]; break;
-      case kStopTag: [self stopTurret:self]; break;
-    }
-	});
-}
-
-- (NSTimeInterval)socket:(GCDAsyncSocket *)sock shouldTimeoutReadWithTag:(long)tag
-                 elapsed:(NSTimeInterval)elapsed
-               bytesDone:(NSUInteger)length
-{
-	if (elapsed <= 5.0)
-	{
-		NSString *warningMsg = @"Are you still there?\r\n";
-		NSData *warningData = [warningMsg dataUsingEncoding:NSUTF8StringEncoding];
-		
-		[sock writeData:warningData withTimeout:-1 tag:5];
-		
-		return 10.0;
-	}
-	
-	return 0.0;
-}
-
-#pragma mark - NSNetService Delegate
-- (void)netServiceDidPublish:(NSNetService *)ns
-{
-	NSLog(@"Bonjour Service Published: domain(%@) type(%@) name(%@) port(%i)",
-        [ns domain], [ns type], [ns name], (int)[ns port]);
-}
-
-- (void)netService:(NSNetService *)ns didNotPublish:(NSDictionary *)errorDict
-{
-	// Override me to do something here...
-	// 
-	// Note: This method in invoked on our bonjour thread.
-	
-	NSLog(@"Failed to Publish Service: domain(%@) type(%@) name(%@) - %@",
-        [ns domain], [ns type], [ns name], errorDict);
-}
 @end
