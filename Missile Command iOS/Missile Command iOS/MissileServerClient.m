@@ -67,7 +67,7 @@
   if (self.delegate && [self.delegate respondsToSelector:@selector(client:didDisconnectFromSocket:withError:)]) {
     [self.delegate client:self didDisconnectFromSocket:sock withError:err];
   } 
-
+  
 	if (!_connected)
 	{
 		[self connectToNextAddress];
@@ -97,7 +97,8 @@
 }
 
 - (void)endSession {
-  [self.socket disconnect];
+  [self.service stop];
+  [self.socket disconnectAfterReadingAndWriting];
 }
 
 - (void)writeDataToSocket:(NSData *)data {

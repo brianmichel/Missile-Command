@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MissileServerClient.h"
 #import "GCDAsyncSocket.h"
 
-@interface MCMDetailViewController : UIViewController <GCDAsyncSocketDelegate, NSNetServiceDelegate> {
+@interface MCMDetailViewController : UIViewController <MissileServerClientDelegate> {
   UILabel *serverLabel;
   UIButton *upButton;
   UIButton *downButton;
@@ -20,6 +21,8 @@
   NSNetService *service;
   UIButton *downAction;
   NSArray *buttons;
+  IBOutlet UIView *connectingOverlay;
+  MissileServerClient *client;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *serverLabel;
@@ -29,10 +32,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *rightButton;
 @property (strong, nonatomic) IBOutlet UIButton *stopButton;
 @property (strong, nonatomic) IBOutlet UIButton *fireButton;
-@property (strong, nonatomic) NSNetService *service;
-@property (strong, nonatomic) NSMutableArray *addressArray;
-@property (strong, nonatomic) GCDAsyncSocket *asyncSocket;
+@property (strong, nonatomic) IBOutlet UIView *connectingOverlay;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
+@property (strong, nonatomic) MissileServerClient *client;
 
 - (IBAction)upAction:(id)sender;
 - (IBAction)downAction:(id)sender;

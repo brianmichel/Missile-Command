@@ -13,8 +13,6 @@
 
 @synthesize addressArray = __addressArray;
 @synthesize serviceBrowser = __serviceBrowser;
-@synthesize serverService = __serverService;
-@synthesize asyncSocket = __asyncSocket;
 @synthesize servicesArray = __servicesArray;
 
 - (void)didReceiveMemoryWarning
@@ -110,10 +108,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  NSNetService *service = [self.servicesArray objectAtIndex:0];
-  MCMDetailViewController *detail = [[MCMDetailViewController alloc] initWithNibName:@"MCMDetailViewController" bundle:nil andService:service];
-  detail.asyncSocket = self.asyncSocket;
-  [self.navigationController pushViewController:detail animated:YES];
+  if ([self.servicesArray count] > 0) {
+    NSNetService *service = [self.servicesArray objectAtIndex:indexPath.row];
+    MCMDetailViewController *detail = [[MCMDetailViewController alloc] initWithNibName:@"MCMDetailViewController" bundle:nil andService:service];
+    [self.navigationController pushViewController:detail animated:YES];
+  }
 }
 
 #pragma mark - NSNetService(Browser) Delegate
@@ -133,17 +132,6 @@
     [self.servicesArray addObject:netService];
   }
   
-  
-	if (self.serverService == nil)
-	{
-		NSLog(@"Resolving...");
-		
-		self.serverService = netService;
-		
-		[self.serverService setDelegate:self];
-		[self.serverService resolveWithTimeout:5.0];
-	}
-  
   [self.tableView reloadData];
 }
 
@@ -162,100 +150,4 @@
 {
 	NSLog(@"DidStopSearch");
 }
-
-- (void)netService:(NSNetService *)sender didNotResolve:(NSDictionary *)errorDict
-{
-	NSLog(@"DidNotResolve");
-}
-
-- (void)netServiceDidResolveAddress:(NSNetService *)sender
-{
-	NSLog(@"DidResolve: %@", [sender addresses]);
-	
-	if (self.addressArray == nil)
-	{
-		self.addressArray = [[sender addresses] mutableCopy];
-	}
-	
-	if (self.asyncSocket == nil)
-	{
-		self.asyncSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
-    [self connectToNextAddress];
-	}
-}
-
-- (void)connectToNextAddress
-{
-	BOOL done = NO;
-	
-	while (!done && ([self.addressArray count] > 0))
-	{
-		NSData *addr;
-		
-		// Note: The serverAddresses array probably contains both IPv4 and IPv6 addresses.
-		// 
-		// If your server is also using GCDAsyncSocket then you don't have to worry about it,
-		// as the socket automatically handles both protocols for you transparently.
-		
-		if (YES) // Iterate forwards
-		{
-			addr = [self.addressArray objectAtIndex:0];
-			[self.addressArray removeObjectAtIndex:0];
-		}
-		else // Iterate backwards
-		{
-			addr = [self.addressArray lastObject];
-			[self.addressArray removeLastObject];
-		}
-		
-		NSLog(@"Attempting connection to %@", addr);
-		
-		NSError *err = nil;
-		if ([self.asyncSocket connectToAddress:addr error:&err])
-		{
-			done = YES;
-		}
-		else
-		{
-			NSLog(@"Unable to connect: %@", err);
-		}
-	}
-	
-	if (!done)
-	{
-		NSLog(@"Unable to connect to any resolved address");
-	}
-}
-
-- (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port
-{
-	NSLog(@"Socket:DidConnectToHost: %@ Port: %hu", host, port);
-	
-	connected = YES;
-  [sock readDataWithTimeout:-1 tag:0];
-}
-
-- (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
-{
-	NSLog(@"SocketDidDisconnect:WithError: %@", err);
-	
-	if (!connected)
-	{
-		[self connectToNextAddress];
-	}
-}
-
-- (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
-  NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-  NSLog(@"READ STRING %@", string);
-}
-
-- (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {
-  NSLog(@"DID WRITE THE DATA");
-}
-
-- (void)socket:(GCDAsyncSocket *)sock didWritePartialDataOfLength:(NSUInteger)partialLength tag:(long)tag {
-  NSLog(@"WROTE PARTIAL DATA?");
-}
-
 @end
