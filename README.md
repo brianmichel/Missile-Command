@@ -30,7 +30,7 @@ It should be noted that the keyUp events on the window will trigger as turret st
 The Future
 ----------
 
- I'm working on making the desktop app advertise a Bonjour service so that the accompanying iPhone app (which I'm also working out right now), can find turrets available on a given network and gain control over them. 
+ Don't know! I got the Bonjour server working for desktop, I'm currently working on making the desktop apps aware of other Bonjour services so they can control remote turrets. There are also some minor(ish) issues I'm working out still. If you have any suggestions feel free to let me know, I'm looking for things to add!
 
 Issues
 -------
