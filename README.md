@@ -10,6 +10,8 @@ Things You Should Know
 
  I've only tested this with the Dream Cheeky Thunder USB Missile Launcher, but it may work with the Dream Cheeky O.I.C. missile launcher as well. Feel free to give it a try and let me know!
 
+**Important:** The no_arc branch will not be updates as frequently as the master branch is updated. I will try to do my best, but I know it will end up lagging behind at some point.
+
 How To Use The App
 ------------------
  Click the ugly buttons on the window! 
