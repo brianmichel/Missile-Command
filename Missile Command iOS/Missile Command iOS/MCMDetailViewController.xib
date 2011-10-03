@@ -237,7 +237,7 @@
 								<string key="NSFrame">{{0, 120}, {320, 121}}</string>
 								<reference key="NSSuperview" ref="882997741"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="140522866"/>
+								<reference key="NSNextKeyView" ref="767222071"/>
 								<string key="NSReuseIdentifierKey">_NS:328</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -266,6 +266,36 @@
 								<object class="NSFont" key="IBUIFont">
 									<string key="NSName">Helvetica</string>
 									<double key="NSSize">23</double>
+									<int key="NSfFlags">16</int>
+								</object>
+							</object>
+							<object class="IBUIButton" id="767222071">
+								<reference key="NSNextResponder" ref="882997741"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{109, 230}, {102, 37}}</string>
+								<reference key="NSSuperview" ref="882997741"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="140522866"/>
+								<string key="NSReuseIdentifierKey">_NS:225</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<int key="IBUIContentHorizontalAlignment">0</int>
+								<int key="IBUIContentVerticalAlignment">0</int>
+								<int key="IBUIButtonType">1</int>
+								<string key="IBUINormalTitle">Reconnect</string>
+								<reference key="IBUIHighlightedTitleColor" ref="326581818"/>
+								<object class="NSColor" key="IBUINormalTitleColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+								</object>
+								<reference key="IBUINormalTitleShadowColor" ref="910182474"/>
+								<object class="IBUIFontDescription" key="IBUIFontDescription">
+									<int key="type">2</int>
+									<double key="pointSize">15</double>
+								</object>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Helvetica-Bold</string>
+									<double key="NSSize">15</double>
 									<int key="NSfFlags">16</int>
 								</object>
 							</object>
@@ -495,6 +525,15 @@
 					</object>
 					<int key="connectionID">36</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">reconnect:</string>
+						<reference key="source" ref="767222071"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">50</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -575,12 +614,18 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="884527128"/>
+							<reference ref="767222071"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">40</int>
 						<reference key="object" ref="884527128"/>
+						<reference key="parent" ref="882997741"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">49</int>
+						<reference key="object" ref="767222071"/>
 						<reference key="parent" ref="882997741"/>
 					</object>
 				</object>
@@ -601,6 +646,7 @@
 					<string>15.IBPluginDependency</string>
 					<string>39.IBPluginDependency</string>
 					<string>40.IBPluginDependency</string>
+					<string>49.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 				</object>
@@ -609,6 +655,7 @@
 					<string>MCMDetailViewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>UIResponder</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -634,7 +681,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">48</int>
+			<int key="maxID">50</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -649,12 +696,14 @@
 							<string>downAction:</string>
 							<string>fireAction:</string>
 							<string>leftAction:</string>
+							<string>reconnect:</string>
 							<string>rightAction:</string>
 							<string>stopAction:</string>
 							<string>upAction:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -670,6 +719,7 @@
 							<string>downAction:</string>
 							<string>fireAction:</string>
 							<string>leftAction:</string>
+							<string>reconnect:</string>
 							<string>rightAction:</string>
 							<string>stopAction:</string>
 							<string>upAction:</string>
@@ -686,6 +736,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">leftAction:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">reconnect:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

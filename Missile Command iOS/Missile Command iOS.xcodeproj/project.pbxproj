@@ -20,8 +20,8 @@
 		725084AB14353AAC0017E8BC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725084AA14353AAC0017E8BC /* Security.framework */; };
 		725084B114353D000017E8BC /* MCMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725084AF14353D000017E8BC /* MCMDetailViewController.m */; };
 		725084B214353D000017E8BC /* MCMDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 725084B014353D000017E8BC /* MCMDetailViewController.xib */; };
-		72720155143932690005A171 /* MissileServerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 72720154143932690005A171 /* MissileServerClient.m */; };
 		7272015714393AB10005A171 /* stripebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7272015614393AB10005A171 /* stripebg.png */; };
+		72C9A8511439453100214629 /* MissileServerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C9A8501439453100214629 /* MissileServerClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +45,9 @@
 		725084AE14353D000017E8BC /* MCMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMDetailViewController.h; sourceTree = "<group>"; };
 		725084AF14353D000017E8BC /* MCMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMDetailViewController.m; sourceTree = "<group>"; };
 		725084B014353D000017E8BC /* MCMDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCMDetailViewController.xib; sourceTree = "<group>"; };
-		72720153143932690005A171 /* MissileServerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissileServerClient.h; sourceTree = "<group>"; };
-		72720154143932690005A171 /* MissileServerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissileServerClient.m; sourceTree = "<group>"; };
 		7272015614393AB10005A171 /* stripebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stripebg.png; sourceTree = "<group>"; };
+		72C9A84F1439453100214629 /* MissileServerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissileServerClient.h; sourceTree = "<group>"; };
+		72C9A8501439453100214629 /* MissileServerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissileServerClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +152,8 @@
 		72720151143932110005A171 /* Missile Server Client */ = {
 			isa = PBXGroup;
 			children = (
-				72720153143932690005A171 /* MissileServerClient.h */,
-				72720154143932690005A171 /* MissileServerClient.m */,
+				72C9A84F1439453100214629 /* MissileServerClient.h */,
+				72C9A8501439453100214629 /* MissileServerClient.m */,
 			);
 			name = "Missile Server Client";
 			sourceTree = "<group>";
@@ -228,7 +228,7 @@
 				72508459143533690017E8BC /* MCMViewController.m in Sources */,
 				725084A714353A960017E8BC /* GCDAsyncSocket.m in Sources */,
 				725084B114353D000017E8BC /* MCMDetailViewController.m in Sources */,
-				72720155143932690005A171 /* MissileServerClient.m in Sources */,
+				72C9A8511439453100214629 /* MissileServerClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -57,6 +57,10 @@
   [self.client writeDataToSocket:data];
 }
 
+- (IBAction)reconnect:(id)sender {
+  [self.client reconnectSession];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andService:(NSNetService *)service_ {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {

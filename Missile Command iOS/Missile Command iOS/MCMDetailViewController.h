@@ -42,6 +42,7 @@
 - (IBAction)rightAction:(id)sender;
 - (IBAction)stopAction:(id)sender;
 - (IBAction)fireAction:(id)sender;
+- (IBAction)reconnect:(id)sender;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andService:(NSNetService *)service_;
 
