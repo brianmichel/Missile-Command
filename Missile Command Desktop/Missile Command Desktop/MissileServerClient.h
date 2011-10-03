@@ -13,6 +13,7 @@
 
 @protocol MissileServerClientDelegate <NSObject>
 
+@optional
 - (void)client:(MissileServerClient *)client didReceiveMessage:(NSString *)message;
 - (void)client:(MissileServerClient *)client failedToConnectToServer:(NSError *)error;
 - (void)client:(MissileServerClient *)client didDisconnectFromSocket:(GCDAsyncSocket *)socket withError:(NSError *)error;
