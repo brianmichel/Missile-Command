@@ -3,14 +3,15 @@
 //  Missile Command Desktop
 //
 //  Created by Brian Michel on 9/29/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Brian Michel. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
 #import "MissileCommandWindow.h"
 #import "GCDAsyncSocket.h"
+#import "MissileServer.h"
 
-@interface MCAppDelegate : NSObject <NSApplicationDelegate, NSNetServiceDelegate> {
+@interface MCAppDelegate : NSObject <NSApplicationDelegate, MissileServerDelegate> {
   NSButton *_upButton;
   NSButton *_rightButton;
   NSButton *_downButton;
@@ -31,11 +32,8 @@
 @property (strong) IBOutlet NSButton *stopButton;
 @property (strong) IBOutlet NSTextField *failureTextField;
 @property (strong) IBOutlet NSSegmentedControl *serverSwitch;
-@property (strong) GCDAsyncSocket *asyncSocket;
-@property (strong) NSNetService *service;
-@property (strong) NSMutableArray *connections;
-@property (assign) IBOutlet NSTextFieldCell *numberOfClients;
-
+@property (strong) IBOutlet NSTextFieldCell *numberOfClients;
+@property (strong) MissileServer *server;
 
 - (IBAction)stopTurret:(id)sender;
 - (IBAction)moveUp:(id)sender;

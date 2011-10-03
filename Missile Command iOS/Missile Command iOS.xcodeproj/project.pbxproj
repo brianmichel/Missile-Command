@@ -20,6 +20,8 @@
 		725084AB14353AAC0017E8BC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725084AA14353AAC0017E8BC /* Security.framework */; };
 		725084B114353D000017E8BC /* MCMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725084AF14353D000017E8BC /* MCMDetailViewController.m */; };
 		725084B214353D000017E8BC /* MCMDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 725084B014353D000017E8BC /* MCMDetailViewController.xib */; };
+		7272015714393AB10005A171 /* stripebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7272015614393AB10005A171 /* stripebg.png */; };
+		72C9A8511439453100214629 /* MissileServerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C9A8501439453100214629 /* MissileServerClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,9 @@
 		725084AE14353D000017E8BC /* MCMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMDetailViewController.h; sourceTree = "<group>"; };
 		725084AF14353D000017E8BC /* MCMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMDetailViewController.m; sourceTree = "<group>"; };
 		725084B014353D000017E8BC /* MCMDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCMDetailViewController.xib; sourceTree = "<group>"; };
+		7272015614393AB10005A171 /* stripebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stripebg.png; sourceTree = "<group>"; };
+		72C9A84F1439453100214629 /* MissileServerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissileServerClient.h; sourceTree = "<group>"; };
+		72C9A8501439453100214629 /* MissileServerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissileServerClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +96,7 @@
 		7250844B143533690017E8BC /* Missile Command iOS */ = {
 			isa = PBXGroup;
 			children = (
+				72720151143932110005A171 /* Missile Server Client */,
 				725084AD14353CB40017E8BC /* View Controllers */,
 				725084AC14353CA40017E8BC /* Resources */,
 				725084A414353A860017E8BC /* AsyncSocket */,
@@ -124,6 +130,7 @@
 		725084AC14353CA40017E8BC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7272015614393AB10005A171 /* stripebg.png */,
 				725084B014353D000017E8BC /* MCMDetailViewController.xib */,
 				7250845A143533690017E8BC /* MCMViewController_iPhone.xib */,
 				7250845D143533690017E8BC /* MCMViewController_iPad.xib */,
@@ -140,6 +147,15 @@
 				72508458143533690017E8BC /* MCMViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		72720151143932110005A171 /* Missile Server Client */ = {
+			isa = PBXGroup;
+			children = (
+				72C9A84F1439453100214629 /* MissileServerClient.h */,
+				72C9A8501439453100214629 /* MissileServerClient.m */,
+			);
+			name = "Missile Server Client";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +212,7 @@
 				7250845C143533690017E8BC /* MCMViewController_iPhone.xib in Resources */,
 				7250845F143533690017E8BC /* MCMViewController_iPad.xib in Resources */,
 				725084B214353D000017E8BC /* MCMDetailViewController.xib in Resources */,
+				7272015714393AB10005A171 /* stripebg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +228,7 @@
 				72508459143533690017E8BC /* MCMViewController.m in Sources */,
 				725084A714353A960017E8BC /* GCDAsyncSocket.m in Sources */,
 				725084B114353D000017E8BC /* MCMDetailViewController.m in Sources */,
+				72C9A8511439453100214629 /* MissileServerClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +316,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Missile Command iOS/Missile Command iOS-Prefix.pch";
 				INFOPLIST_FILE = "Missile Command iOS/Missile Command iOS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -311,7 +329,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Missile Command iOS/Missile Command iOS-Prefix.pch";
 				INFOPLIST_FILE = "Missile Command iOS/Missile Command iOS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

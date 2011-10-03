@@ -3,7 +3,7 @@
 //  Missile Command Mobile
 //
 //  Created by Brian Michel on 9/29/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Brian Michel. All rights reserved.
 //
 
 #import "MCMDetailViewController.h"
@@ -23,46 +23,50 @@
 @synthesize rightButton;
 @synthesize stopButton;
 @synthesize fireButton;
-@synthesize service;
-@synthesize addressArray;
-@synthesize asyncSocket;
 @synthesize buttons;
+@synthesize connectingOverlay;
+@synthesize client;
 
 - (IBAction)upAction:(id)sender {
   NSData *data = [[NSString stringWithFormat:@"%i\r\n",kUpTag] dataUsingEncoding:NSUTF8StringEncoding];
-  [self.asyncSocket writeData:data withTimeout:-1 tag:kUpTag];
+  [self.client writeDataToSocket:data];
 }
 
 - (IBAction)downAction:(id)sender {
   NSData *data = [[NSString stringWithFormat:@"%i\r\n",kDownTag] dataUsingEncoding:NSUTF8StringEncoding];
-  [self.asyncSocket writeData:data withTimeout:-1 tag:kDownTag];
+  [self.client writeDataToSocket:data];
 }
 
 - (IBAction)leftAction:(id)sender {
   NSData *data = [[NSString stringWithFormat:@"%i\r\n",kLeftTag] dataUsingEncoding:NSUTF8StringEncoding];
-  [self.asyncSocket writeData:data withTimeout:-1 tag:kLeftTag];
+  [self.client writeDataToSocket:data];
 }
 
 - (IBAction)rightAction:(id)sender {
   NSData *data = [[NSString stringWithFormat:@"%i\r\n",kRightTag] dataUsingEncoding:NSUTF8StringEncoding];
-  [self.asyncSocket writeData:data withTimeout:-1 tag:kRightTag];
+  [self.client writeDataToSocket:data];
 }
 
 - (IBAction)stopAction:(id)sender {
   NSData *data = [[NSString stringWithFormat:@"%i\r\n",kStopTag] dataUsingEncoding:NSUTF8StringEncoding];
-  [self.asyncSocket writeData:data withTimeout:-1 tag:kStopTag];
+  [self.client writeDataToSocket:data];
 }
 
 - (IBAction)fireAction:(id)sender {
   NSData *data = [[NSString stringWithFormat:@"%i\r\n",kFireTag] dataUsingEncoding:NSUTF8StringEncoding];
-  [self.asyncSocket writeData:data withTimeout:-1 tag:kFireTag];
+  [self.client writeDataToSocket:data];
+}
+
+- (IBAction)reconnect:(id)sender {
+  [self.client reconnectSession];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andService:(NSNetService *)service_ {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    self.service = service_;
-    self.serverLabel.text = self.service.name;
+    self.client = [[MissileServerClient alloc] initWithService:service_];
+    [self.client setDelegate:self];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"stripebg.png"]];
   }
   return self;
 }
@@ -102,6 +106,7 @@
   [self setStopButton:nil];
   [self setFireButton:nil];
   [self setButtons:nil];
+  connectingOverlay = nil;
   [super viewDidUnload];
   // Release any retained subviews of the main view.
   // e.g. self.myOutlet = nil;
@@ -115,7 +120,14 @@
   }
   
   self.title = @"Controls";
-  self.serverLabel.text = self.service.name;
+  self.serverLabel.text = self.client.service.name;
+  
+  [self.client startSession];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+  [self.client endSession];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -124,34 +136,26 @@
   return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)netService:(NSNetService *)sender didNotResolve:(NSDictionary *)errorDict
-{
-	NSLog(@"DidNotResolve");
+
+#pragma mark - Missile Server Client Delegate
+- (void)clientDidConnectToServer {
+  [UIView animateWithDuration:0.3 animations:^{
+    self.connectingOverlay.alpha = 0.0f;
+  }];
+  
+  for (UIButton *button in self.buttons) {
+    [button setEnabled:YES];
+  }
 }
 
-- (void)netServiceDidResolveAddress:(NSNetService *)sender
-{
-	NSLog(@"DidResolve: %@", [sender addresses]);
-	
-	if (self.addressArray == nil)
-	{
-		self.addressArray = [[sender addresses] mutableCopy];
-	}
-	
-	if (self.asyncSocket == nil)
-	{
-		self.asyncSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
-    for (UIButton *button in self.buttons) {
-      [button setEnabled:YES];
-    }
-	}
-}
-
-- (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {
-  NSLog(@"Wrote the data!");
+- (void)client:(MissileServerClient *)client didDisconnectFromSocket:(GCDAsyncSocket *)socket withError:(NSError *)error {
+  [UIView animateWithDuration:0.3 animations:^{
+    self.connectingOverlay.alpha = 0.9f;
+  }];
 }
 
 - (void)dealloc {
+  [connectingOverlay release];
   [serverLabel release];
   [upButton release];
   [downAction release];

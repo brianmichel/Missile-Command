@@ -3,7 +3,7 @@
 //  Missile Command iOS
 //
 //  Created by Brian Michel on 9/29/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Brian Michel. All rights reserved.
 //
 
 #import "MCMAppDelegate.h"
@@ -25,7 +25,8 @@
       self.viewController = [[[MCMViewController alloc] initWithNibName:@"MCMViewController_iPad" bundle:nil] autorelease]; 
   }
   
-  UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:self.viewController] autorelease];
+  UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+  nav.navigationBar.barStyle = UIBarStyleBlack;
   self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     return YES;

@@ -10,16 +10,18 @@ Things You Should Know
 
  I've only tested this with the Dream Cheeky Thunder USB Missile Launcher, but it may work with the Dream Cheeky O.I.C. missile launcher as well. Feel free to give it a try and let me know!
 
+**Important:** The no_arc branch will not be updates as frequently as the master branch is updated. I will try to do my best, but I know it will end up lagging behind at some point.
+
 How To Use The App
 ------------------
  Click the ugly buttons on the window! 
  
  The app supports the following keyboard shortcuts:
 
- * `w` - turret up
- * `a` - turret left
- * `s` - turret down
- * `d` - turret right
+ * `w` or `↑` - turret up
+ * `a` or `←` - turret left
+ * `s` or `↓` - turret down
+ * `d` or `→` - turret right
  * `p` - turret stop
  * `space` - fire
 
@@ -33,7 +35,7 @@ The Future
 Issues
 -------
 
- The iPhone app is still only kind of working, can't seem to get the data to actually write to the socket and be received by the server. I'm not sure if the server is the issue, or if the socket is the issue. Working on it!
+ The iPhone app is still only kind of working, you can send a couple of commands, but then the socket seems to just die. There are some issues with getting the socket again, but that will be addressed a little later.
 
 Special Thanks
 ---------------
