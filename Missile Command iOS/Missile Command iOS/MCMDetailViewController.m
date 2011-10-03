@@ -62,6 +62,7 @@
   if (self) {
     self.client = [[MissileServerClient alloc] initWithService:service_];
     [self.client setDelegate:self];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"stripebg.png"]];
   }
   return self;
 }
