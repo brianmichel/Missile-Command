@@ -91,6 +91,11 @@
 }
 
 #pragma mark - Actions
+- (void)reconnectSession {
+  [self endSession];
+  [self startSession];
+}
+
 - (void)startSession {
   [self.service setDelegate:self];
   [self.service resolveWithTimeout:5.0];
@@ -98,6 +103,8 @@
 
 - (void)endSession {
   [self.socket disconnect];
+  [self.service stop];
+  _connected = NO;
 }
 
 - (void)writeDataToSocket:(NSData *)data {

@@ -95,7 +95,7 @@
     NSNetService *service = [self.servicesArray objectAtIndex:indexPath.row];
     cell.textLabel.text = service.name;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
     cell.userInteractionEnabled = YES;
   } else {
     cell.textLabel.text = @"No Turrets Found";

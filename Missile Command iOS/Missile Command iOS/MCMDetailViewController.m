@@ -138,11 +138,15 @@
   [UIView animateWithDuration:0.3 animations:^{
     self.connectingOverlay.alpha = 0.0f;
   }];
+  
+  for (UIButton *button in self.buttons) {
+    [button setEnabled:YES];
+  }
 }
 
 - (void)client:(MissileServerClient *)client didDisconnectFromSocket:(GCDAsyncSocket *)socket withError:(NSError *)error {
   [UIView animateWithDuration:0.3 animations:^{
-    self.connectingOverlay.alpha = 0.5f;
+    self.connectingOverlay.alpha = 0.9f;
   }];
 }
 

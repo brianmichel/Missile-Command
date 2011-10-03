@@ -47,6 +47,9 @@
 }
 
 - (void)stop {
+  for (GCDAsyncSocket *connectedSocket in self.connections) {
+    [connectedSocket disconnect];
+  }
   [self.connections removeAllObjects];
   [self.socket disconnectAfterReadingAndWriting];
   [self.service stop];

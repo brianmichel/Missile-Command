@@ -33,6 +33,7 @@
 - (id)initWithService:(NSNetService *)service;
 - (void)startSession;
 - (void)endSession;
+- (void)reconnectSession;
 - (void)writeDataToSocket:(NSData *)data;
 
 @end
