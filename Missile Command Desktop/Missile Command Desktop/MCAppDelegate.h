@@ -43,4 +43,5 @@
 - (IBAction)moveLeft:(id)sender;
 - (IBAction)fire:(id)sender;
 - (IBAction)toggleServer:(id)sender;
+- (IBAction)showRemoteTurrets:(id)sender;
 @end

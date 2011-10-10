@@ -8,6 +8,7 @@
 
 #import "MCAppDelegate.h"
 #import "MissileCommandCenter.h"
+#import "MCRemoteTurretWindowController.h"
 
 @interface MCAppDelegate (Private)
 - (void)enableButtons;
@@ -93,6 +94,11 @@
       [self.server stop];
       break;
   }
+}
+
+- (IBAction)showRemoteTurrets:(id)sender {
+  MCRemoteTurretWindowController *wc = [[MCRemoteTurretWindowController alloc] init];
+  [self.window addChildWindow:wc.window ordered:NSWindowAbove];
 }
 
 - (void)turretConnectivityChange:(NSNotification *)notification {
