@@ -496,10 +496,10 @@
 						<object class="NSTextField" id="571072041">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{167, 10}, {306, 20}}</string>
+							<string key="NSFrame">{{167, 10}, {267, 20}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
+							<reference key="NSNextKeyView" ref="728581633"/>
 							<object class="NSShadow" key="NSViewShadow">
 								<double key="NSShadowVert">-1</double>
 								<object class="NSColor" key="NSShadowColor" id="41693594">
@@ -519,6 +519,35 @@
 								<reference key="NSControlView" ref="571072041"/>
 								<reference key="NSBackgroundColor" ref="422127552"/>
 								<reference key="NSTextColor" ref="52412775"/>
+							</object>
+						</object>
+						<object class="NSButton" id="728581633">
+							<reference key="NSNextResponder" ref="439893737"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{439, 7}, {31, 25}}</string>
+							<reference key="NSSuperview" ref="439893737"/>
+							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
+							<int key="NSViewLayerContentsRedrawPolicy">2</int>
+							<string key="NSReuseIdentifierKey">_NS:287</string>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSButtonCell" key="NSCell" id="338469844">
+								<int key="NSCellFlags">-2080244224</int>
+								<int key="NSCellFlags2">134217728</int>
+								<string key="NSContents"/>
+								<reference key="NSSupport" ref="1051580561"/>
+								<string key="NSCellIdentifier">_NS:287</string>
+								<reference key="NSControlView" ref="728581633"/>
+								<int key="NSButtonFlags">-2033958657</int>
+								<int key="NSButtonFlags2">163</int>
+								<object class="NSCustomResource" key="NSNormalImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">NSQuickLookTemplate</string>
+								</object>
+								<string key="NSAlternateContents"/>
+								<string key="NSKeyEquivalent"/>
+								<int key="NSPeriodicDelay">400</int>
+								<int key="NSPeriodicInterval">75</int>
 							</object>
 						</object>
 					</object>
@@ -738,6 +767,22 @@
 					</object>
 					<int key="connectionID">619</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">livePreview</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="728581633"/>
+					</object>
+					<int key="connectionID">630</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">showLivePreview:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="728581633"/>
+					</object>
+					<int key="connectionID">631</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -894,6 +939,7 @@
 							<reference ref="530905744"/>
 							<reference ref="908199921"/>
 							<reference ref="571072041"/>
+							<reference ref="728581633"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -1070,6 +1116,20 @@
 						<reference key="object" ref="218093745"/>
 						<reference key="parent" ref="571072041"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">628</int>
+						<reference key="object" ref="728581633"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="338469844"/>
+						</object>
+						<reference key="parent" ref="439893737"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">629</int>
+						<reference key="object" ref="338469844"/>
+						<reference key="parent" ref="728581633"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1131,6 +1191,8 @@
 					<string>617.IBViewIntegration.shadowOffsetHeight</string>
 					<string>617.IBViewIntegration.shadowOffsetWidth</string>
 					<string>618.IBPluginDependency</string>
+					<string>628.IBPluginDependency</string>
+					<string>629.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1189,6 +1251,8 @@
 					<real value="-1"/>
 					<real value="0.0"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -1203,7 +1267,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">627</int>
+			<int key="maxID">631</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1220,12 +1284,14 @@
 							<string>moveLeft:</string>
 							<string>moveRight:</string>
 							<string>moveUp:</string>
+							<string>showLivePreview:</string>
 							<string>showRemoteTurrets:</string>
 							<string>stopTurret:</string>
 							<string>toggleServer:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -1245,6 +1311,7 @@
 							<string>moveLeft:</string>
 							<string>moveRight:</string>
 							<string>moveUp:</string>
+							<string>showLivePreview:</string>
 							<string>showRemoteTurrets:</string>
 							<string>stopTurret:</string>
 							<string>toggleServer:</string>
@@ -1272,6 +1339,10 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
+								<string key="name">showLivePreview:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
 								<string key="name">showRemoteTurrets:</string>
 								<string key="candidateClassName">id</string>
 							</object>
@@ -1293,6 +1364,7 @@
 							<string>failureTextField</string>
 							<string>fireButton</string>
 							<string>leftButton</string>
+							<string>livePreview</string>
 							<string>numberOfClients</string>
 							<string>rightButton</string>
 							<string>serverSwitch</string>
@@ -1304,6 +1376,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSButton</string>
 							<string>NSTextField</string>
+							<string>NSButton</string>
 							<string>NSButton</string>
 							<string>NSButton</string>
 							<string>NSTextFieldCell</string>
@@ -1322,6 +1395,7 @@
 							<string>failureTextField</string>
 							<string>fireButton</string>
 							<string>leftButton</string>
+							<string>livePreview</string>
 							<string>numberOfClients</string>
 							<string>rightButton</string>
 							<string>serverSwitch</string>
@@ -1345,6 +1419,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">leftButton</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">livePreview</string>
 								<string key="candidateClassName">NSButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
@@ -1402,11 +1480,13 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>NSMenuCheckmark</string>
 				<string>NSMenuMixedState</string>
+				<string>NSQuickLookTemplate</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{9, 8}</string>
 				<string>{7, 2}</string>
+				<string>{21, 16}</string>
 			</object>
 		</object>
 	</data>

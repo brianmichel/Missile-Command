@@ -9,6 +9,7 @@
 #import "MCAppDelegate.h"
 #import "MissileCommandCenter.h"
 #import "MCRemoteTurretWindowController.h"
+#import "MCTurretCameraWindowController.h"
 
 @interface MCAppDelegate (Private)
 - (void)enableButtons;
@@ -19,6 +20,7 @@
 
 @implementation MCAppDelegate
 
+@synthesize livePreview = _livePreview;
 @synthesize window = _window;
 @synthesize upButton = _upButton;
 @synthesize rightButton = _rightButton;
@@ -58,6 +60,11 @@
 }
 
 #pragma mark - Turret Actions
+- (IBAction)showLivePreview:(id)sender {
+  MCTurretCameraWindowController *wc = [[MCTurretCameraWindowController alloc] init];
+  [self.window addChildWindow:wc.window ordered:NSWindowAbove];
+}
+
 - (IBAction)stopTurret:(id)sender {
   [[MissileCommandCenter sharedCommandCenter] stopTurret];
 }

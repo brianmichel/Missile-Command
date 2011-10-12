@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7215B14314451D4900A39FDA /* MCTurretCameraWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7215B14214451D4900A39FDA /* MCTurretCameraWindowController.m */; };
+		7215B14614451DC300A39FDA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7215B14514451DC300A39FDA /* AVFoundation.framework */; };
+		7215B14814451E2600A39FDA /* MCTurretCameraWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7215B14714451E2600A39FDA /* MCTurretCameraWindow.xib */; };
+		7215B14A1445370700A39FDA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7215B1491445370600A39FDA /* CoreVideo.framework */; };
+		7215B14C1445372800A39FDA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7215B14B1445372700A39FDA /* QuartzCore.framework */; };
+		7215B14E1445373400A39FDA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7215B14D1445373400A39FDA /* CoreMedia.framework */; };
 		72508475143533850017E8BC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72508474143533850017E8BC /* Cocoa.framework */; };
 		7250847F143533860017E8BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7250847D143533860017E8BC /* InfoPlist.strings */; };
 		72508481143533860017E8BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72508480143533860017E8BC /* main.m */; };
@@ -29,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7215B14114451D4900A39FDA /* MCTurretCameraWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTurretCameraWindowController.h; sourceTree = "<group>"; };
+		7215B14214451D4900A39FDA /* MCTurretCameraWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTurretCameraWindowController.m; sourceTree = "<group>"; };
+		7215B14514451DC300A39FDA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7215B14714451E2600A39FDA /* MCTurretCameraWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCTurretCameraWindow.xib; sourceTree = "<group>"; };
+		7215B1491445370600A39FDA /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		7215B14B1445372700A39FDA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7215B14D1445373400A39FDA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		72508470143533850017E8BC /* Missile Command Desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Missile Command Desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72508474143533850017E8BC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		72508477143533850017E8BC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -69,6 +82,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7215B14E1445373400A39FDA /* CoreMedia.framework in Frameworks */,
+				7215B14C1445372800A39FDA /* QuartzCore.framework in Frameworks */,
+				7215B14A1445370700A39FDA /* CoreVideo.framework in Frameworks */,
+				7215B14614451DC300A39FDA /* AVFoundation.framework in Frameworks */,
 				725084A3143537210017E8BC /* Security.framework in Frameworks */,
 				725084A1143537160017E8BC /* IOKit.framework in Frameworks */,
 				72508475143533850017E8BC /* Cocoa.framework in Frameworks */,
@@ -98,6 +115,10 @@
 		72508473143533850017E8BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7215B14D1445373400A39FDA /* CoreMedia.framework */,
+				7215B14B1445372700A39FDA /* QuartzCore.framework */,
+				7215B1491445370600A39FDA /* CoreVideo.framework */,
+				7215B14514451DC300A39FDA /* AVFoundation.framework */,
 				725084A2143537210017E8BC /* Security.framework */,
 				725084A0143537160017E8BC /* IOKit.framework */,
 				72508474143533850017E8BC /* Cocoa.framework */,
@@ -157,6 +178,8 @@
 		72508495143533F90017E8BC /* Windows */ = {
 			isa = PBXGroup;
 			children = (
+				7215B14114451D4900A39FDA /* MCTurretCameraWindowController.h */,
+				7215B14214451D4900A39FDA /* MCTurretCameraWindowController.m */,
 				72508496143534140017E8BC /* MissileCommandWindow.h */,
 				72508497143534140017E8BC /* MissileCommandWindow.m */,
 				72C3CA52143E7FAC00DA7C9B /* MCRemoteTurretWindowController.h */,
@@ -180,6 +203,7 @@
 				72C3CA55143E859F00DA7C9B /* Views */,
 				7250849E143535770017E8BC /* MainMenu.xib */,
 				72C3CA4F143E7E0F00DA7C9B /* RemoteTurretWindow.xib */,
+				7215B14714451E2600A39FDA /* MCTurretCameraWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -278,6 +302,7 @@
 				72C3CA62143E9BF900DA7C9B /* Camera_icon.gif in Resources */,
 				72C3CA63143E9BF900DA7C9B /* Rocket.png in Resources */,
 				72E6D7FA1443AEEE006911AD /* Icon.icns in Resources */,
+				7215B14814451E2600A39FDA /* MCTurretCameraWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +322,7 @@
 				72720150143929710005A171 /* MissileServerClient.m in Sources */,
 				72C3CA54143E7FAC00DA7C9B /* MCRemoteTurretWindowController.m in Sources */,
 				72C3CA5E143E99B300DA7C9B /* MCRemoteTurretCellView.m in Sources */,
+				7215B14314451D4900A39FDA /* MCTurretCameraWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

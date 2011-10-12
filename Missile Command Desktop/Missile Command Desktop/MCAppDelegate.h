@@ -23,6 +23,7 @@
   NSTextFieldCell *_numberOfClients;
 }
 
+@property (strong) IBOutlet NSButton *livePreview;
 @property (strong) IBOutlet MissileCommandWindow *window;
 @property (strong) IBOutlet NSButton *upButton;
 @property (strong) IBOutlet NSButton *rightButton;
@@ -35,7 +36,7 @@
 @property (strong) IBOutlet NSTextFieldCell *numberOfClients;
 @property (strong) MissileServer *server;
 
-
+- (IBAction)showLivePreview:(id)sender;
 - (IBAction)stopTurret:(id)sender;
 - (IBAction)moveUp:(id)sender;
 - (IBAction)moveRight:(id)sender;
