@@ -52,7 +52,7 @@
   AVCaptureSession *captureSession = [[AVCaptureSession alloc] init];
   
   NSError *error = nil;
-  AVCaptureDeviceInput *captureInput = [AVCaptureDeviceInput deviceInputWithDevice:[captureDevices objectAtIndex:1] error:&error];
+  AVCaptureDeviceInput *captureInput = [AVCaptureDeviceInput deviceInputWithDevice:[captureDevices objectAtIndex:0] error:&error];
   
   [captureSession addInput:captureInput];
   
@@ -62,11 +62,11 @@
   output.videoSettings = [NSDictionary dictionaryWithObject:[outputs objectAtIndex:0]
                                                      forKey:(id)kCVPixelBufferPixelFormatTypeKey];
   
-  dispatch_queue_t queue = dispatch_queue_create("get_video_frames", NULL);
-  [output setSampleBufferDelegate:self queue:queue];
-  
-  [captureSession startRunning];
-  
+//  dispatch_queue_t queue = dispatch_queue_create("get_video_frames", NULL);
+//  [output setSampleBufferDelegate:self queue:queue];
+//  
+[captureSession startRunning];
+//  
   // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
   AVCaptureVideoPreviewLayer *previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:captureSession];
   
